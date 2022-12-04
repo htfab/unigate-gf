@@ -20,12 +20,18 @@ set ::env(DESIGN_NAME) unigate
 
 set ::env(VERILOG_FILES) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
+	$::env(DESIGN_DIR)/../../verilog/rtl/u21.v \
+	$::env(DESIGN_DIR)/../../verilog/rtl/u31.v \
+	$::env(DESIGN_DIR)/../../verilog/rtl/u41.v \
+	$::env(DESIGN_DIR)/../../verilog/rtl/u22.v \
+	$::env(DESIGN_DIR)/../../verilog/rtl/ucomb.v \
+	$::env(DESIGN_DIR)/../../verilog/rtl/ucomb_full.v \
 	$::env(DESIGN_DIR)/../../verilog/rtl/unigate.v"
 
 set ::env(DESIGN_IS_CORE) 0
 
 set ::env(CLOCK_PORT) "wb_clk_i"
-set ::env(CLOCK_NET) "counter.clk"
+set ::env(CLOCK_NET) "wb_clk_i"
 set ::env(CLOCK_PERIOD) "24.0"
 
 set ::env(FP_SIZING) absolute
@@ -34,7 +40,7 @@ set ::env(DIE_AREA) "0 0 900 600"
 set ::env(FP_PIN_ORDER_CFG) $::env(DESIGN_DIR)/pin_order.cfg
 
 set ::env(PL_BASIC_PLACEMENT) 0
-set ::env(PL_TARGET_DENSITY) 0.45
+set ::env(PL_TARGET_DENSITY) 0.25
 
 set ::env(FP_CORE_UTIL) 40
 

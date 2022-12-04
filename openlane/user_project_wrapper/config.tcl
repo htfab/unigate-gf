@@ -34,7 +34,7 @@ set ::env(VERILOG_FILES) "\
 
 ## Clock configurations
 set ::env(CLOCK_PORT) "user_clock2"
-set ::env(CLOCK_NET) "mprj.clk"
+set ::env(CLOCK_NET) "mprj.wb_clk_i"
 
 set ::env(CLOCK_PERIOD) "10"
 
@@ -49,6 +49,12 @@ set ::env(MACRO_PLACEMENT_CFG) $::env(DESIGN_DIR)/macro.cfg
 ### Black-box verilog and views
 set ::env(VERILOG_FILES_BLACKBOX) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
+	$::env(DESIGN_DIR)/../../verilog/rtl/u21.v \
+	$::env(DESIGN_DIR)/../../verilog/rtl/u31.v \
+	$::env(DESIGN_DIR)/../../verilog/rtl/u41.v \
+	$::env(DESIGN_DIR)/../../verilog/rtl/u22.v \
+	$::env(DESIGN_DIR)/../../verilog/rtl/ucomb.v \
+	$::env(DESIGN_DIR)/../../verilog/rtl/ucomb_full.v \
 	$::env(DESIGN_DIR)/../../verilog/rtl/unigate.v"
 
 set ::env(EXTRA_LEFS) "\
